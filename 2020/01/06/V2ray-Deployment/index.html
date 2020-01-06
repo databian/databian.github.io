@@ -6,7 +6,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    V2ray Deployment |  Hexo
+    V2ray 部署 |  Hexo
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -38,7 +38,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  V2ray Deployment
+  V2ray 部署
 </h1>
   
 
@@ -71,27 +71,54 @@
       
 
       
-      <h1 id="V2ray部署"><a href="#V2ray部署" class="headerlink" title="V2ray部署"></a>V2ray部署</h1><hr>
-<p>##V2ray部署常用参考网站</p>
-<blockquote>
-<p>开BBR  <a href="https://teddysun.com/489.html" target="_blank" rel="noopener">https://teddysun.com/489.html</a><br>V2ray一键脚本   <a href="https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC" target="_blank" rel="noopener">https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC</a><br>V2ray一键脚本   <a href="https://la4ji.blogspot.com/2018/02/v2ray.html" target="_blank" rel="noopener">https://la4ji.blogspot.com/2018/02/v2ray.html</a><br>centos常用命令   <a href="https://blog.csdn.net/o0darknessyy0o/article/details/52072054" target="_blank" rel="noopener">https://blog.csdn.net/o0darknessyy0o/article/details/52072054</a><br>centos常用命令   <a href="https://www.cnblogs.com/love-snow/articles/8283187.html" target="_blank" rel="noopener">https://www.cnblogs.com/love-snow/articles/8283187.html</a><br>自动代理规则   <a href="https://github.com/gfwlist/gfwlist" target="_blank" rel="noopener">https://github.com/gfwlist/gfwlist</a><br>V2ray官网   <a href="https://www.v2ray.com/" target="_blank" rel="noopener">https://www.v2ray.com/</a><br>centos 开端口   <a href="https://blog.csdn.net/qq_24232123/article/details/79781527" target="_blank" rel="noopener">https://blog.csdn.net/qq_24232123/article/details/79781527</a><br>V2ray订阅     <a href="https://aishangyou.tube/?p=6885" target="_blank" rel="noopener">https://aishangyou.tube/?p=6885</a><br>V2ray订阅     <a href="https://ntgeralt.blogspot.com/2018/06/ssr.html" target="_blank" rel="noopener">https://ntgeralt.blogspot.com/2018/06/ssr.html</a></p>
-</blockquote>
-<hr>
-<p>Markdown语法<br>A First Level Header<br>====================<br>A Second Level Header</p>
-<hr>
-<p>Now is the time for all good men to come to<br>the aid of their country. This is just a<br>regular paragraph.</p>
-<p>The quick brown fox jumped over the lazy<br>dog’s back.</p>
-<h3 id="Header-3"><a href="#Header-3" class="headerlink" title="Header 3"></a>Header 3</h3><blockquote>
-<p>This is a blockquote.</p>
-<p>This is the second paragraph in the blockquote.</p>
-<h2 id="This-is-an-H2-in-a-blockquote"><a href="#This-is-an-H2-in-a-blockquote" class="headerlink" title="This is an H2 in a blockquote"></a>This is an H2 in a blockquote</h2></blockquote>
+      <h1 id="V2ray部署流程"><a href="#V2ray部署流程" class="headerlink" title="V2ray部署流程"></a>V2ray部署流程</h1><hr>
+<ul>
+<li>安装V2ray一键脚本</li>
+<li>检查端口是否开放</li>
+<li>安装BBR加速</li>
+<li>配置客户端</li>
+</ul>
+<h1 id="V2ray一键脚本"><a href="#V2ray一键脚本" class="headerlink" title="V2ray一键脚本"></a>V2ray一键脚本</h1><hr>
+<p>安装前需要获取root权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root -i</span><br></pre></td></tr></table></figure>
+<p>执行一键脚本，开源地址<a href="https://github.com/233boy/v2ray" target="_blank" rel="noopener">233blog</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
+<p>没有特殊需求全部默认配置即可</p>
+<h1 id="检查端口是否开放"><a href="#检查端口是否开放" class="headerlink" title="检查端口是否开放"></a>检查端口是否开放</h1><hr>
+<p>对于centos 7.3<br>查看目标端口是否开放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --query-port&#x3D;666&#x2F;tcp</span><br></pre></td></tr></table></figure>
+<p>提示 no 表示未开，若此提示 FirewallD is not running<br>表示为不可知的防火墙 需要查看状态并开启防火墙</p>
+<p>开放永久端口号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port&#x3D;666&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure>
+<p>提示 success 表示成功</p>
+<p>重新载入配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>其他常用端口命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp  #查看已打开的端口</span><br><span class="line">systemctl status firewalld  #查看防火墙状态，running表示已运行，dead表示未开启</span><br><span class="line">systemctl start firewalld   #开启防火墙</span><br><span class="line">systemctl stop firewalld    #关闭防火墙</span><br><span class="line">irewall-cmd --permanent --remove-port&#x3D;666&#x2F;tcp   #移除端口</span><br></pre></td></tr></table></figure>
+
+<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)<br><img src="/images/v2ray001.jpg" alt="alt text"></p>
+<p>点击 &gt; 创建防火墙规则<br><img src="/images/v2ray002.jpg" alt="alt text"></p>
+<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。<br><img src="/images/v2ray003.jpg" alt="alt text"></p>
+<h1 id="安装BBR加速"><a href="#安装BBR加速" class="headerlink" title="安装BBR加速"></a>安装BBR加速</h1><hr>
+<p>使用root用户登陆，运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;github.com&#x2F;teddysun&#x2F;across&#x2F;raw&#x2F;master&#x2F;bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; .&#x2F;bbr.sh</span><br></pre></td></tr></table></figure>
+<p>安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。<br>重启完成后，进入 VPS，验证一下是否成功安装最新内核并开启 TCP BBR，输入以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_available_congestion_control</span><br></pre></td></tr></table></figure>
+<p>返回值一般为：<br>net.ipv4.tcp_available_congestion_control = bbr cubic reno<br>或者为：<br>net.ipv4.tcp_available_congestion_control = reno cubic bbr</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.ipv4.tcp_congestion_control</span><br></pre></td></tr></table></figure>
+<p>返回值一般为：<br>net.ipv4.tcp_congestion_control = bbr</p>
+<h1 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h1><hr>
+<p>服务端配置完成后，在服务端输入 <code>v2ray url</code> 即可获得V2ray配置信息<br>复制vmess开头的一段字符<br>在客户端点击从剪贴板添加服务器即可完成配置。</p>
+<p><strong>V2ray部署常用参考网站</strong></p>
+<p><a href="https://teddysun.com/489.html" target="_blank" rel="noopener">开BBR</a><br><a href="https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC" target="_blank" rel="noopener">V2ray一键脚本</a><br><a href="https://la4ji.blogspot.com/2018/02/v2ray.html" target="_blank" rel="noopener">V2ray一键脚本</a><br><a href="https://blog.csdn.net/o0darknessyy0o/article/details/52072054" target="_blank" rel="noopener">centos常用命令</a><br><a href="https://www.cnblogs.com/love-snow/articles/8283187.html" target="_blank" rel="noopener">centos常用命令</a><br><a href="https://github.com/gfwlist/gfwlist" target="_blank" rel="noopener">自动代理规则</a><br><a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2ray官网</a><br><a href="https://blog.csdn.net/qq_24232123/article/details/79781527/" target="_blank" rel="noopener">centos 开端口</a><br><a href="https://aishangyou.tube/?p=6885" target="_blank" rel="noopener">V2ray订阅</a><br><a href="https://ntgeralt.blogspot.com/2018/06/ssr.html" target="_blank" rel="noopener">V2ray订阅</a></p>
 
       
       <!-- 打赏 -->
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/06/V2ray-Deployment/" data-id="ck529h7kn00001oidglfgao01"
+      <a data-url="http://yoursite.com/2020/01/06/V2ray-Deployment/" data-id="ck52jhxde00007kidhh4a8e2f"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
