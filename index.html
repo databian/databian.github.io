@@ -123,9 +123,9 @@
 <p>其他常用端口命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp  #查看已打开的端口</span><br><span class="line">systemctl status firewalld  #查看防火墙状态，running表示已运行，dead表示未开启</span><br><span class="line">systemctl start firewalld   #开启防火墙</span><br><span class="line">systemctl stop firewalld    #关闭防火墙</span><br><span class="line">irewall-cmd --permanent --remove-port&#x3D;666&#x2F;tcp   #移除端口</span><br></pre></td></tr></table></figure>
 
-<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)<br><img src="/images/v2ray001.jpg" alt="alt text"></p>
-<p>点击 &gt; 创建防火墙规则<br><img src="/images/v2ray002.jpg" alt="alt text"></p>
-<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。<br><img src="/images/v2ray003.jpg" alt="alt text"></p>
+<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)<br><img src="/v2ray001.png" alt="alt text"></p>
+<p>点击 &gt; 创建防火墙规则<br><img src="/v2ray002.png" alt="alt text"></p>
+<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。<br><img src="/v2ray003.png" alt="alt text"></p>
 <h1 id="安装BBR加速"><a href="#安装BBR加速" class="headerlink" title="安装BBR加速"></a>安装BBR加速</h1><hr>
 <p>使用root用户登陆，运行以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;github.com&#x2F;teddysun&#x2F;across&#x2F;raw&#x2F;master&#x2F;bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; .&#x2F;bbr.sh</span><br></pre></td></tr></table></figure>
@@ -144,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/06/V2ray-Deployment/" data-id="ck52jhxde00007kidhh4a8e2f"
+      <a data-url="http://yoursite.com/2020/01/06/V2ray-Deployment/" data-id="ck52k2hii0000tkideipcg4wp"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/V2ray/" rel="tag">V2ray</a></li></ul>
@@ -217,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/02/hello-world/" data-id="ck52jhxdj00017kid45wi9x56"
+      <a data-url="http://yoursite.com/2020/01/02/hello-world/" data-id="ck52k2hiz0003tkid3td17pf6"
         class="article-share-link">分享</a>
       
     </footer>
