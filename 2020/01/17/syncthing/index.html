@@ -46,15 +46,15 @@
   };
 </script>
 
-  <meta name="description" content="Centos7安装SyncthingSyncthing下载安装命令12345678910wget https:&#x2F;&#x2F;github.com&#x2F;syncthing&#x2F;syncthing&#x2F;releases&#x2F;download&#x2F;v1.1.1&#x2F;syncthing-linux-amd64-v1.1.1.tar.gz#解压命令tar -zx">
+  <meta name="description" content="Centos7安装SyncthingSyncthing是使用点对点协议在多台设备之间同步文件的开源软件，支持Linux、Windows、OS X、FreeBSD、Solaris 等系统，并且有第三方的 iOS、Android应用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="syncthing">
 <meta property="og:url" content="http://yoursite.com/2020/01/17/syncthing/index.html">
 <meta property="og:site_name" content="HAO">
-<meta property="og:description" content="Centos7安装SyncthingSyncthing下载安装命令12345678910wget https:&#x2F;&#x2F;github.com&#x2F;syncthing&#x2F;syncthing&#x2F;releases&#x2F;download&#x2F;v1.1.1&#x2F;syncthing-linux-amd64-v1.1.1.tar.gz#解压命令tar -zx">
+<meta property="og:description" content="Centos7安装SyncthingSyncthing是使用点对点协议在多台设备之间同步文件的开源软件，支持Linux、Windows、OS X、FreeBSD、Solaris 等系统，并且有第三方的 iOS、Android应用。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-17T04:51:22.000Z">
-<meta property="article:modified_time" content="2020-01-17T05:40:18.039Z">
+<meta property="article:modified_time" content="2020-01-19T06:58:22.203Z">
 <meta property="article:author" content="bianhao">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
@@ -202,10 +202,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-01-17 12:51:22 / Modified: 13:40:18" itemprop="dateCreated datePublished" datetime="2020-01-17T12:51:22+08:00">2020-01-17</time>
+              <time title="Created: 2020-01-17 12:51:22" itemprop="dateCreated datePublished" datetime="2020-01-17T12:51:22+08:00">2020-01-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-01-19 14:58:22" itemprop="dateModified" datetime="2020-01-19T14:58:22+08:00">2020-01-19</time>
+              </span>
 
           
 
@@ -218,7 +224,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Centos7安装Syncthing"><a href="#Centos7安装Syncthing" class="headerlink" title="Centos7安装Syncthing"></a>Centos7安装Syncthing</h1><h2 id="Syncthing下载安装命令"><a href="#Syncthing下载安装命令" class="headerlink" title="Syncthing下载安装命令"></a>Syncthing下载安装命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;syncthing&#x2F;syncthing&#x2F;releases&#x2F;download&#x2F;v1.1.1&#x2F;syncthing-linux-amd64-v1.1.1.tar.gz</span><br><span class="line"></span><br><span class="line">#解压命令</span><br><span class="line">tar -zxvf syncthing-linux-amd64-v1.1.1.tar.gz</span><br><span class="line"></span><br><span class="line">#进入解压目录将syncthing程序复制到&#x2F;usr&#x2F;local&#x2F;bin目录</span><br><span class="line">cd syncthing-linux-amd64-v1.1.1</span><br><span class="line">cp syncthing &#x2F;usr&#x2F;bin&#x2F;</span><br><span class="line"></span><br><span class="line">#因为syncting是go写的程序，复制到了bin目录就能直接运行生效无需编译安装搞一大对</span><br></pre></td></tr></table></figure>
+        <h1 id="Centos7安装Syncthing"><a href="#Centos7安装Syncthing" class="headerlink" title="Centos7安装Syncthing"></a>Centos7安装Syncthing</h1><p>Syncthing是使用点对点协议在多台设备之间同步文件的开源软件，支持Linux、Windows、OS X、FreeBSD、Solaris 等系统，并且有第三方的 <a href="https://geo.itunes.apple.com/cn/app/fsync/id964427882?mt=8&at=1000l7mq&ct=appinnpost" target="_blank" rel="noopener">iOS</a>、<a href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid" target="_blank" rel="noopener">Android</a>应用。</p>
+<a id="more"></a>
+
+<h2 id="Syncthing下载安装命令"><a href="#Syncthing下载安装命令" class="headerlink" title="Syncthing下载安装命令"></a>Syncthing下载安装命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;syncthing&#x2F;syncthing&#x2F;releases&#x2F;download&#x2F;v1.1.1&#x2F;syncthing-linux-amd64-v1.1.1.tar.gz</span><br><span class="line"></span><br><span class="line">#解压命令</span><br><span class="line">tar -zxvf syncthing-linux-amd64-v1.1.1.tar.gz</span><br><span class="line"></span><br><span class="line">#进入解压目录将syncthing程序复制到&#x2F;usr&#x2F;local&#x2F;bin目录</span><br><span class="line">cd syncthing-linux-amd64-v1.1.1</span><br><span class="line">cp syncthing &#x2F;usr&#x2F;bin&#x2F;</span><br><span class="line"></span><br><span class="line">#因为syncting是go写的程序，复制到了bin目录就能直接运行生效无需编译安装搞一大对</span><br></pre></td></tr></table></figure>
 
 <p>运行一次syncting让它自动生成一个配置文件，然后ctrl+c结束程序</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动syncthing命令</span></span><br><span class="line">syncthing</span><br></pre></td></tr></table></figure>
@@ -251,7 +260,10 @@
     <a href="/2020/01/12/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="prev" title="地球编年史">
       <i class="fa fa-chevron-left"></i> 地球编年史
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/18/%E5%A4%96%E6%98%9F%E4%BA%BA/" rel="next" title="外星人">
+      外星人 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -327,7 +339,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
