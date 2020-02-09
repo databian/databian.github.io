@@ -46,22 +46,18 @@
   };
 </script>
 
-  <meta name="description" content="V2ray部署流程  安装V2ray一键脚本 检查端口是否开放 安装BBR加速 配置客户端">
+  <meta name="description" content="V2ray部署流程  安装V2ray一键脚本 检查端口是否开放 安装BBR加速 配置客户端 制作订阅（可选）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="V2ray 部署">
 <meta property="og:url" content="http://yoursite.com/2020/01/06/V2ray-Deployment/index.html">
 <meta property="og:site_name" content="HAO">
-<meta property="og:description" content="V2ray部署流程  安装V2ray一键脚本 检查端口是否开放 安装BBR加速 配置客户端">
+<meta property="og:description" content="V2ray部署流程  安装V2ray一键脚本 检查端口是否开放 安装BBR加速 配置客户端 制作订阅（可选）">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/v2ray001.png">
-<meta property="og:image" content="http://yoursite.com/v2ray002.png">
-<meta property="og:image" content="http://yoursite.com/v2ray003.png">
 <meta property="article:published_time" content="2020-01-06T09:41:19.000Z">
-<meta property="article:modified_time" content="2020-01-16T03:36:27.752Z">
+<meta property="article:modified_time" content="2020-02-09T05:00:34.648Z">
 <meta property="article:author" content="bianhao">
 <meta property="article:tag" content="V2ray">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/v2ray001.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/06/V2ray-Deployment/">
 
@@ -214,7 +210,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-16 11:36:27" itemprop="dateModified" datetime="2020-01-16T11:36:27+08:00">2020-01-16</time>
+                <time title="Modified: 2020-02-09 13:00:34" itemprop="dateModified" datetime="2020-02-09T13:00:34+08:00">2020-02-09</time>
               </span>
 
           
@@ -234,10 +230,11 @@
 <li>检查端口是否开放</li>
 <li>安装BBR加速</li>
 <li>配置客户端</li>
+<li>制作订阅（可选）</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="V2ray一键脚本"><a href="#V2ray一键脚本" class="headerlink" title="V2ray一键脚本"></a>V2ray一键脚本</h1><hr>
+<h1 id="安装V2ray一键脚本"><a href="#安装V2ray一键脚本" class="headerlink" title="安装V2ray一键脚本"></a>安装V2ray一键脚本</h1><hr>
 <p>安装前需要获取root权限</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
 <p>执行一键脚本，开源地址<a href="https://github.com/233boy/v2ray" target="_blank" rel="noopener">233blog</a></p>
@@ -256,9 +253,9 @@
 <p>其他常用端口命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp  #查看已打开的端口</span><br><span class="line">systemctl status firewalld  #查看防火墙状态，running表示已运行，dead表示未开启</span><br><span class="line">systemctl start firewalld   #开启防火墙</span><br><span class="line">systemctl stop firewalld    #关闭防火墙</span><br><span class="line">irewall-cmd --permanent --remove-port&#x3D;666&#x2F;tcp   #移除端口</span><br></pre></td></tr></table></figure>
 
-<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)<br><img src="/v2ray001.png" alt="alt text"></p>
-<p>点击 &gt; 创建防火墙规则<br><img src="/v2ray002.png" alt="alt text"></p>
-<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。<br><img src="/v2ray003.png" alt="alt text"></p>
+<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)</p>
+<p>点击 &gt; 创建防火墙规则</p>
+<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。</p>
 <h1 id="安装BBR加速"><a href="#安装BBR加速" class="headerlink" title="安装BBR加速"></a>安装BBR加速</h1><hr>
 <p>使用root用户登陆，运行以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https:&#x2F;&#x2F;github.com&#x2F;teddysun&#x2F;across&#x2F;raw&#x2F;master&#x2F;bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; .&#x2F;bbr.sh</span><br></pre></td></tr></table></figure>
@@ -269,6 +266,21 @@
 <p>返回值一般为：<br>net.ipv4.tcp_congestion_control = bbr</p>
 <h1 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h1><hr>
 <p>服务端配置完成后，在服务端输入 <code>v2ray url</code> 即可获得V2ray配置信息<br>复制vmess开头的一段字符<br>在客户端点击从剪贴板添加服务器即可完成配置。</p>
+<h1 id="制作订阅"><a href="#制作订阅" class="headerlink" title="制作订阅"></a>制作订阅</h1><p>订阅原理：配置信息发布到网站，客户端通过访问订阅链接获取配置信息。关键步骤有三步</p>
+<ol>
+<li>对导出的配置信息base64加密，得到订阅内容；</li>
+<li>将订阅内容放到网站上，获取订阅链接；</li>
+<li>在客户端上添加订阅地址，刷新验证订阅信息。</li>
+</ol>
+<p>其中第二步有多种方式，本质就是将订阅信息公布到网络上，使得任何人都可以通过一个链接获取订阅信息。通过onedrive或者github是两种比较简单的得到订阅链接的方式。</p>
+<h2 id="onedrive制作订阅链接"><a href="#onedrive制作订阅链接" class="headerlink" title="onedrive制作订阅链接"></a>onedrive制作订阅链接</h2><ol>
+<li>onedrive目录下新建文本文档，将base64加密过的配置信息粘贴进去，保存文件并删除文件后缀。</li>
+<li>创建该文件的共享链接，将链接放到<a href="https://onedrive.gimhoy.com/" target="_blank" rel="noopener">外链网</a>制成外链，如果外链比较长可以使用短网址。得到的外链或者短网址就是订阅地址。</li>
+</ol>
+<h2 id="github制作订阅链接"><a href="#github制作订阅链接" class="headerlink" title="github制作订阅链接"></a>github制作订阅链接</h2><ol>
+<li>在github新建公开仓库，添加新文件，将<a href="https://tool.chinaz.com/tools/base64.aspx" target="_blank" rel="noopener">base64</a>加密配置信息写入，提交更改。</li>
+<li>点开添加的文件，点击RAW按钮，新打开的网页地址就是订阅地址。</li>
+</ol>
 <p><strong>V2ray部署常用参考网站</strong></p>
 <hr>
 <p>GFWList URL(Github): <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></p>
@@ -357,7 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#V2ray部署流程"><span class="nav-number">1.</span> <span class="nav-text">V2ray部署流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V2ray一键脚本"><span class="nav-number">2.</span> <span class="nav-text">V2ray一键脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查端口是否开放"><span class="nav-number">3.</span> <span class="nav-text">检查端口是否开放</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装BBR加速"><span class="nav-number">4.</span> <span class="nav-text">安装BBR加速</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置客户端"><span class="nav-number">5.</span> <span class="nav-text">配置客户端</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#V2ray部署流程"><span class="nav-number">1.</span> <span class="nav-text">V2ray部署流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装V2ray一键脚本"><span class="nav-number">2.</span> <span class="nav-text">安装V2ray一键脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查端口是否开放"><span class="nav-number">3.</span> <span class="nav-text">检查端口是否开放</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装BBR加速"><span class="nav-number">4.</span> <span class="nav-text">安装BBR加速</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置客户端"><span class="nav-number">5.</span> <span class="nav-text">配置客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作订阅"><span class="nav-number">6.</span> <span class="nav-text">制作订阅</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#onedrive制作订阅链接"><span class="nav-number">6.1.</span> <span class="nav-text">onedrive制作订阅链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github制作订阅链接"><span class="nav-number">6.2.</span> <span class="nav-text">github制作订阅链接</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
