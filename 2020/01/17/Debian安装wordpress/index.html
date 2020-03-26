@@ -46,15 +46,20 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="hao">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="Debian 安装 wordpress获取 root 权限 1sudo -i  安装 yum 和 wget 1234sudo apt-get updatesudo apt-get install build-essentialsudo apt-get install yumsudo apt-get install wget">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Debian 安装 wordpress">
+<meta property="og:url" content="http://yoursite.com/2020/01/17/Debian%E5%AE%89%E8%A3%85wordpress/index.html">
 <meta property="og:site_name" content="hao">
+<meta property="og:description" content="Debian 安装 wordpress获取 root 权限 1sudo -i  安装 yum 和 wget 1234sudo apt-get updatesudo apt-get install build-essentialsudo apt-get install yumsudo apt-get install wget">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-17T04:51:22.000Z">
+<meta property="article:modified_time" content="2020-03-26T12:37:23.009Z">
 <meta property="article:author" content="bianhao">
+<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/">
+<link rel="canonical" href="http://yoursite.com/2020/01/17/Debian%E5%AE%89%E8%A3%85wordpress/">
 
 
 <script id="page-configurations">
@@ -62,11 +67,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>归档 | hao</title>
+  <title>Debian 安装 wordpress | hao</title>
   
 
 
@@ -176,189 +181,133 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 8 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/Debian%E5%AE%89%E8%A3%85wordpress/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="bianhao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="hao">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Debian 安装 wordpress
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-17 12:51:22" itemprop="dateCreated datePublished" datetime="2020-01-17T12:51:22+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-26 20:37:23" itemprop="dateModified" datetime="2020-03-26T20:37:23+08:00">2020-03-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <h1 id="Debian-安装-wordpress"><a href="#Debian-安装-wordpress" class="headerlink" title="Debian 安装 wordpress"></a>Debian 安装 wordpress</h1><p>获取 root 权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>安装 yum 和 wget</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install yum</span><br><span class="line">sudo apt-get install wget</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-01T10:10:10+08:00"
-              content="2020-03-01">
-          03-01
-        </time>
-      </div>
+<a id="more"></a>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/01/%E3%80%8A%E4%B8%8E%E7%A5%9E%E5%AF%B9%E8%AF%9D%E3%80%8B%E4%B9%A6%E6%91%98/" itemprop="url">
-            <span itemprop="name">与神对话-书摘</span>
-          </a>
-      </h2>
+<p>屏幕监视程序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -S lnmp</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<ul>
+<li>如果提示<code>screen: command not found</code> 命令不存在可以执行：<code>yum install screen</code> 或 <code>apt-get install screen</code>安装，如果VPS连接中断，可以使用命令<code>screen -R lnmp</code>返回会话窗口。</li>
+</ul>
+<p>安装 lnmp 一键脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; ./install.sh lnmp</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<ul>
+<li>选择配置见lnmp<a href="https://lnmp.org/install.html" target="_blank" rel="noopener">教程</a></li>
+<li>安装完成后运行<code>killall screen</code>关闭监视窗口</li>
+</ul>
+<p>创建虚拟主机，配置数据库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lnmp vhost add</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-19T14:52:50+08:00"
-              content="2020-01-19">
-          01-19
-        </time>
-      </div>
+<ul>
+<li>选项配置见<a href="https://lnmp.org/faq/lnmp-vhost-add-howto.html" target="_blank" rel="noopener">lnmp教程</a>或<a href="https://www.banwagongzw.com/17.html" target="_blank" rel="noopener">搬瓦工教程</a></li>
+</ul>
+<p>下载解压 wordpress 并移动文件至网站根目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://wordpress.org/latest.tar.gz</span><br><span class="line">tar -xzvf latest.tar.gz</span><br><span class="line">cd wordpress</span><br><span class="line">mv * /home/wwwroot/www.databian.com/</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/19/%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB/" itemprop="url">
-            <span itemprop="name">娱乐至死</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-17T12:51:22+08:00"
-              content="2020-01-17">
-          01-17
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/17/syncthing%E7%A7%81%E4%BA%BA%E4%BA%91%E7%9B%98/" itemprop="url">
-            <span itemprop="name">centos7 安装 syncthing</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-17T12:51:22+08:00"
-              content="2020-01-17">
-          01-17
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/17/Debian%E5%AE%89%E8%A3%85wordpress/" itemprop="url">
-            <span itemprop="name">Debian 安装 wordpress</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-08T17:29:04+08:00"
-              content="2020-01-08">
-          01-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/08/Memorabilia/" itemprop="url">
-            <span itemprop="name">Memorabilia 大事记</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-08T16:50:38+08:00"
-              content="2020-01-08">
-          01-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/08/Blog%E6%90%AD%E5%BB%BA/" itemprop="url">
-            <span itemprop="name">Blog 搭建</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-07T22:03:43+08:00"
-              content="2020-01-07">
-          01-07
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/07/%E8%A3%85%E6%9C%BA%E8%BD%AF%E4%BB%B6/" itemprop="url">
-            <span itemprop="name">装机软件清单</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-06T17:41:19+08:00"
-              content="2020-01-06">
-          01-06
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/01/06/V2ray%E5%AE%89%E8%A3%85/" itemprop="url">
-            <span itemprop="name">V2ray 部署</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<ul>
+<li><p>以上命令可以用 &amp;&amp; 连接为一整个脚本</p>
+</li>
+<li><pre><code class="shell">wget https://wordpress.org/latest.tar.gz &amp;&amp; tar -xzvf latest.tar.gz &amp;&amp; cd wordpress &amp;&amp; mv * /home/wwwroot/www.databian.com/
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">配置文件权限</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;shell</span><br><span class="line">chown www:www -R &#x2F;home&#x2F;wwwroot&#x2F;www.databian.com</span><br></pre></td></tr></table></figure></code></pre>
+</li>
+<li><p>提示<code>chown: changing ownership of /home/wwwroot/www.baidu.com/.user.ini&#39;: Operation not permitted</code> 执行以下命令. <code>sed -i &#39;s/,scandir//g&#39; /usr/local/php/etc/php.ini &amp;&amp; lnmp php-fpm restart</code> </p>
+</li>
+</ul>
+<p>将域名解析到服务器，输入域名即可开始配置。</p>
+<hr>
+<p><strong>参考链接</strong></p>
+<p>lnmp一键安装 <a href="https://lnmp.org/install.html" target="_blank" rel="noopener">https://lnmp.org/install.html</a></p>
+<p>搬瓦工搭建 WordPress <a href="https://www.banwagongzw.com/17.html" target="_blank" rel="noopener">https://www.banwagongzw.com/17.html</a></p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/08/Memorabilia/" rel="prev" title="Memorabilia 大事记">
+      <i class="fa fa-chevron-left"></i> Memorabilia 大事记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/17/syncthing%E7%A7%81%E4%BA%BA%E4%BA%91%E7%9B%98/" rel="next" title="centos7 安装 syncthing">
+      centos7 安装 syncthing <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -409,6 +358,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Debian-安装-wordpress"><span class="nav-number">1.</span> <span class="nav-text">Debian 安装 wordpress</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

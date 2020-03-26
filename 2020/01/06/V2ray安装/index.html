@@ -46,20 +46,24 @@
   };
 </script>
 
-  <meta name="description" content="博客的最佳运营维护方式：本地markdown文本编辑 - 云盘备份md内容 - 推流到 gitpage &amp; wordpress  本地使用 Typora 编辑 Markdown 博文  .md 博文存储于本地，定期备份到 OnedDrive  GitHub Page &amp;&amp; Codding Page 搭建 Hexo 博客  VPS 搭建 Wordpress 服务，并绑定域名">
+  <meta name="description" content="V2ray部署流程  安装 V2ray 一键脚本 检查端口是否开放 安装 BBR Plus 加速 配置客户端 制作订阅（可选）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog 搭建">
-<meta property="og:url" content="http://yoursite.com/2020/01/08/Blog%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="V2ray 部署">
+<meta property="og:url" content="http://yoursite.com/2020/01/06/V2ray%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="hao">
-<meta property="og:description" content="博客的最佳运营维护方式：本地markdown文本编辑 - 云盘备份md内容 - 推流到 gitpage &amp; wordpress  本地使用 Typora 编辑 Markdown 博文  .md 博文存储于本地，定期备份到 OnedDrive  GitHub Page &amp;&amp; Codding Page 搭建 Hexo 博客  VPS 搭建 Wordpress 服务，并绑定域名">
+<meta property="og:description" content="V2ray部署流程  安装 V2ray 一键脚本 检查端口是否开放 安装 BBR Plus 加速 配置客户端 制作订阅（可选）">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-08T08:50:38.000Z">
-<meta property="article:modified_time" content="2020-03-26T12:36:00.754Z">
+<meta property="og:image" content="http://yoursite.com/v2ray001.png">
+<meta property="og:image" content="http://yoursite.com/v2ray002.png">
+<meta property="og:image" content="http://yoursite.com/v2ray003.png">
+<meta property="article:published_time" content="2020-01-06T09:41:19.000Z">
+<meta property="article:modified_time" content="2020-03-26T12:38:43.195Z">
 <meta property="article:author" content="bianhao">
 <meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/v2ray001.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/01/08/Blog%E6%90%AD%E5%BB%BA/">
+<link rel="canonical" href="http://yoursite.com/2020/01/06/V2ray%E5%AE%89%E8%A3%85/">
 
 
 <script id="page-configurations">
@@ -71,7 +75,7 @@
   };
 </script>
 
-  <title>Blog 搭建 | hao</title>
+  <title>V2ray 部署 | hao</title>
   
 
 
@@ -186,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/08/Blog%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/V2ray%E5%AE%89%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -199,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Blog 搭建
+          V2ray 部署
         </h1>
 
         <div class="post-meta">
@@ -209,14 +213,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-08 16:50:38" itemprop="dateCreated datePublished" datetime="2020-01-08T16:50:38+08:00">2020-01-08</time>
+              <time title="创建时间：2020-01-06 17:41:19" itemprop="dateCreated datePublished" datetime="2020-01-06T17:41:19+08:00">2020-01-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-26 20:36:00" itemprop="dateModified" datetime="2020-03-26T20:36:00+08:00">2020-03-26</time>
+                <time title="修改时间：2020-03-26 20:38:43" itemprop="dateModified" datetime="2020-03-26T20:38:43+08:00">2020-03-26</time>
               </span>
 
           
@@ -230,33 +234,67 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>博客的最佳运营维护方式：<strong>本地markdown文本编辑</strong> - <strong>云盘备份md内容</strong> - <strong>推流到 gitpage &amp; wordpress</strong></p>
+        <h1 id="V2ray部署流程"><a href="#V2ray部署流程" class="headerlink" title="V2ray部署流程"></a>V2ray部署流程</h1><hr>
 <ul>
-<li><p>本地使用 Typora 编辑 Markdown 博文</p>
-</li>
-<li><p>.md 博文存储于本地，定期备份到 OnedDrive</p>
-</li>
-<li><p>GitHub Page &amp;&amp; Codding Page 搭建 Hexo 博客</p>
-</li>
-<li><p>VPS 搭建 Wordpress 服务，并绑定域名</p>
-</li>
-<li><p>博文推流到 Hexo &amp;&amp; wordpress</p>
-</li>
+<li>安装 V2ray 一键脚本</li>
+<li>检查端口是否开放</li>
+<li>安装 BBR Plus 加速</li>
+<li>配置客户端</li>
+<li>制作订阅（可选）</li>
 </ul>
 <a id="more"></a>
 
-<p>博客搭建有多种方式，最简单的就是用现成的博客社区，但是这些社区无法做个性化定制，而且国内言论限制严格，诸多不变。在私人服务器上搭建博客虽然比较折腾，但长远来看更有利于展现完整的思想。以下有四个博客展示，wordpress和hexo是比较推荐的。特别是hexo，使用markdown语言编辑，直接生成为网站，效率高速度快。</p>
+<h1 id="V2ray一键脚本"><a href="#V2ray一键脚本" class="headerlink" title="V2ray一键脚本"></a>V2ray一键脚本</h1><hr>
+<p>安装前需要获取root权限</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+<p>执行一键脚本，开源地址<a href="https://github.com/233boy/v2ray" target="_blank" rel="noopener">233blog</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
+<p>没有特殊需求全部默认配置即可</p>
+<h1 id="检查端口是否开放"><a href="#检查端口是否开放" class="headerlink" title="检查端口是否开放"></a>检查端口是否开放</h1><hr>
+<p>对于centos 7.3<br>查看目标端口是否开放</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --query-port=666/tcp</span><br></pre></td></tr></table></figure>
+<p>提示 no 表示未开，若此提示 FirewallD is not running<br>表示为不可知的防火墙 需要查看状态并开启防火墙</p>
+<p>开放永久端口号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=666/tcp --permanent</span><br></pre></td></tr></table></figure>
+<p>提示 success 表示成功</p>
+<p>重新载入配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>其他常用端口命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp  #查看已打开的端口</span><br><span class="line">systemctl status firewalld  #查看防火墙状态，running表示已运行，dead表示未开启</span><br><span class="line">systemctl start firewalld   #开启防火墙</span><br><span class="line">systemctl stop firewalld    #关闭防火墙</span><br><span class="line">irewall-cmd --permanent --remove-port=666/tcp   #移除端口</span><br></pre></td></tr></table></figure>
+
+<p><strong>对于 Google Cloud Platform 需要再加一个步骤</strong> <a href="https://233v2.com/post/16/" target="_blank" rel="noopener">参考Blog</a><br>由于谷歌云是国际大厂，跟常见的一些 VPS 商家有少许不同，所以需要开放外部防火墙。<br>打开 GCP 控制台，点开左边菜单<br>VPC 网络 &gt; 防火墙规则 &gt; 创建防火墙规则<br>(备注：如果你还没有项目，会提示你需要创建项目，自行创建即可)<br><img src="/v2ray001.png" alt="alt text"></p>
+<p>点击 &gt; 创建防火墙规则<br><img src="/v2ray002.png" alt="alt text"></p>
+<p>防火墙规则配置如图，名字随便起，流量方向选入站，操作选允许，目标选所有实例，来源IP写0.0.0.0/0，协议全部允许。<br><img src="/v2ray003.png" alt="alt text"></p>
+<h1 id="安装-BBR-Plus-加速"><a href="#安装-BBR-Plus-加速" class="headerlink" title="安装 BBR Plus 加速"></a>安装 BBR Plus 加速</h1><hr>
+<p>使用root用户登陆，运行以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O tcp.sh https://github.com/cx9208/Linux-NetSpeed/raw/master/tcp.sh &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br></pre></td></tr></table></figure>
+<p>安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启，然后再次执行脚本，开启 BBR Plus。</p>
+<h1 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h1><hr>
+<p>服务端配置完成后，在服务端输入 <code>v2ray url</code> 即可获得V2ray配置信息<br>复制vmess开头的一段字符<br>在客户端点击从剪贴板添加服务器即可完成配置。</p>
+<p>win客户端：<a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener">V2rayN</a></p>
+<p>安卓客户端：<a href="https://github.com/2dust/v2rayNG" target="_blank" rel="noopener">V2rayNG</a></p>
+<p>ios客户端：shadowrocket(使用美区账号在AppStore下载)</p>
+<p>mac客户端：<a href="https://github.com/yanue/V2rayU" target="_blank" rel="noopener">V2rayU</a></p>
+<h1 id="制作订阅"><a href="#制作订阅" class="headerlink" title="制作订阅"></a>制作订阅</h1><hr>
+<p>订阅原理：配置信息发布到网站，客户端通过访问订阅链接获取配置信息。</p>
+<p>有三个步骤：</p>
 <ol>
-<li>Github page <a href="databian.github.io">演示</a></li>
-<li>WordPress <a href="sleepingdog.xyz">演示</a></li>
-<li>Blog平台 <a href="https://www.cnblogs.com/LazyDog/" target="_blank" rel="noopener">cnblog</a>  <a href="https://databian.blogspot.com/" target="_blank" rel="noopener">Google-Blog</a></li>
+<li>对导出的配置信息base64加密，得到订阅内容；</li>
+<li>将订阅内容放到网站上，获取订阅链接；</li>
+<li>在客户端上添加订阅地址，刷新验证订阅信息。</li>
 </ol>
-<h1 id="Github-page-Hexo"><a href="#Github-page-Hexo" class="headerlink" title="Github page + Hexo"></a>Github page + Hexo</h1><p>使用 github page 网页托管（可以同时发布到 coding，对国内用户比较友好）  +  hexo 博客  +  chevereto 图床</p>
-<p>主题自定义配置</p>
-<p>Hexo多电脑同步<a href="[https://p3p3pp3.github.io/post/2019/hexo%E5%A4%9A%E5%8F%B0%E8%AE%BE%E5%A4%87%E7%9A%84%E5%90%8C%E6%AD%A5.html](https://p3p3pp3.github.io/post/2019/hexo多台设备的同步.html)">例</a></p>
-<p>Hexo配置文件夹可以使用<a href="https://syncthing.net/" target="_blank" rel="noopener">syncthing</a>同步到服务器，更换电脑时直接同步就行。</p>
+<p>其中第二步有多种方式，本质就是将订阅信息公布到网络上，使得任何人都可以通过一个链接获取订阅信息。通过onedrive或者github是两种比较简单的得到订阅链接的方式。</p>
+<h2 id="利用coding-制作订阅"><a href="#利用coding-制作订阅" class="headerlink" title="利用coding 制作订阅"></a>利用coding 制作订阅</h2><ol>
+<li>在 coding 新建公开仓库，添加新文件，将 <a href="https://tool.oschina.net/encrypt?type=3" target="_blank" rel="noopener">base64</a> 加密配置信息写入，提交更改。</li>
+<li>点开添加的文件，点击RAW按钮，新打开的网页地址就是订阅地址。</li>
+</ol>
+<p><strong>参考网站</strong></p>
 <hr>
-<p><strong>参考链接</strong></p>
+<p>GFWList URL(Github): <a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></p>
+<p><a href="https://ssr.tools/1217" target="_blank" rel="noopener">开BBR</a></p>
+<p><a href="https://ssr.tools/1217" target="_blank" rel="noopener">BBRPlus</a></p>
+<p><a href="https://github.com/233boy/v2ray/wiki/V2Ray%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC" target="_blank" rel="noopener">V2ray一键脚本</a><br><a href="https://la4ji.blogspot.com/2018/02/v2ray.html" target="_blank" rel="noopener">V2ray一键脚本</a><br><a href="https://blog.csdn.net/o0darknessyy0o/article/details/52072054" target="_blank" rel="noopener">centos常用命令</a><br><a href="https://www.cnblogs.com/love-snow/articles/8283187.html" target="_blank" rel="noopener">centos常用命令</a><br><a href="https://github.com/gfwlist/gfwlist" target="_blank" rel="noopener">自动代理规则</a><br><a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2ray官网</a><br><a href="https://blog.csdn.net/qq_24232123/article/details/79781527/" target="_blank" rel="noopener">centos 开端口</a><br><a href="https://aishangyou.tube/?p=6885" target="_blank" rel="noopener">V2ray订阅</a><br><a href="https://ntgeralt.blogspot.com/2018/06/ssr.html" target="_blank" rel="noopener">V2ray订阅</a></p>
 
     </div>
 
@@ -274,13 +312,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/01/07/%E8%A3%85%E6%9C%BA%E8%BD%AF%E4%BB%B6/" rel="prev" title="装机软件清单">
-      <i class="fa fa-chevron-left"></i> 装机软件清单
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/01/08/Memorabilia/" rel="next" title="Memorabilia 大事记">
-      Memorabilia 大事记 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/07/%E8%A3%85%E6%9C%BA%E8%BD%AF%E4%BB%B6/" rel="next" title="装机软件清单">
+      装机软件清单 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -341,7 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-page-Hexo"><span class="nav-number">1.</span> <span class="nav-text">Github page + Hexo</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#V2ray部署流程"><span class="nav-number">1.</span> <span class="nav-text">V2ray部署流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#V2ray一键脚本"><span class="nav-number">2.</span> <span class="nav-text">V2ray一键脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查端口是否开放"><span class="nav-number">3.</span> <span class="nav-text">检查端口是否开放</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-BBR-Plus-加速"><span class="nav-number">4.</span> <span class="nav-text">安装 BBR Plus 加速</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置客户端"><span class="nav-number">5.</span> <span class="nav-text">配置客户端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#制作订阅"><span class="nav-number">6.</span> <span class="nav-text">制作订阅</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用coding-制作订阅"><span class="nav-number">6.1.</span> <span class="nav-text">利用coding 制作订阅</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
